@@ -93,7 +93,7 @@ function botonesEliminar() {
      
     let nuevaCantidad = JSON.parse(localStorage.getItem("cantidad"));
     cantidadCarrito.innerText = nuevaCantidad;
-  }
+}
 
 function eliminarPizza(e) {
     const idBoton = e.currentTarget.id;
@@ -119,27 +119,51 @@ function eliminarPizza(e) {
     actualizarCantidad();  
 
     localStorage.setItem("pizzasEnCarrito", JSON.stringify(carrito));
-  }
+}
 
 
-                     /* Boton Comprar y Total */
+                    /* Boton Comprar y Total */
 
-  function actualizarTotal() {
-    const calculoTotal = carrito.reduce((acc, pizza) => acc + (pizza.precio * pizza.cantidad), 0);
-    total.innerText = `$${calculoTotal}`;
-  }
+function actualizarTotal() {
+  const calculoTotal = carrito.reduce((acc, pizza) => acc + (pizza.precio * pizza.cantidad), 0);
+  total.innerText = `$${calculoTotal}`;
+}
 
-  comprar.addEventListener("click", comprarCarrito);
+comprar.addEventListener("click", comprarCarrito);
 
-  function comprarCarrito() {
-    carrito.length = 0;
-    localStorage.setItem("pizzasEnCarrito", JSON.stringify(carrito));
-    carritoVacio.classList.add("ocultar");
-    carritoPizzas.classList.add("ocultar");
-    carritoAcciones.classList.add("ocultar");
-    carritoGracias.classList.remove("ocultar");
-    cantidadCarrito.innerText = 0;
-  }
+function comprarCarrito() {
+  Swal.fire({
+    title: '¿Deseas pagar ahora?',
+    text: `Tienes ${cantidadEnCarrito} pizzas agregadas`,
+    iconColor: `#faa33f`,
+    confirmButtonText: `Aceptar`,
+    confirmButtonColor: `#ffa339`,
+    cancelButtonColor: `#6a6a6a`,
+    focusCancel: true,
+    showCancelButton: true,
+    cancelButtonText: `Cancelar`,
+    reverseButtons: true,
+    iconHtml: `<i class='bx bxs-happy-heart-eyes'></i>`,
+  }).then((result) => {
+    if (result.isConfirmed){
+      Swal.fire({
+        title: `Muchas gracias!`,
+        text: `Has comprado ${cantidadEnCarrito} pizzas`,
+        icon: `success`,
+        iconColor: `#faa33f`,
+        confirmButtonColor: `#ffa339`,
+        confirmButtonText: `Ok`,
+      })
+      carrito.length = 0;
+      localStorage.setItem("pizzasEnCarrito", JSON.stringify(carrito));
+      carritoVacio.classList.add("ocultar");
+      carritoPizzas.classList.add("ocultar");
+      carritoAcciones.classList.add("ocultar");
+      carritoGracias.classList.remove("ocultar");
+      cantidadCarrito.innerText = 0;
+    }
+  })
+}
 
                      /* Botones Sumar y Restar */
 
