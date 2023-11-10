@@ -1,0 +1,171 @@
+[
+    {   
+        "id": "01",
+        "nombre": "Top Cheddar",
+        "categoria": "Clasicas",
+        "precio": 1500,
+        "imagen": "./img/pizza1.png"
+    },
+    {   
+        "id": "02",
+        "nombre": "Al Capone",
+        "categoria": "Clasicas",
+        "precio": 2300,
+        "imagen": "./img/pizza2.png"
+    },
+    {   
+        "id": "03",
+        "nombre": "Sour Cream",
+        "categoria": "Clasicas",
+        "precio": 1700,
+        "imagen": "./img/pizza3.png"
+    },
+    {   
+        "id": "04",
+        "nombre": "Crazy Chicken",
+        "categoria": "Clasicas",
+        "precio": 1750,
+        "imagen": "./img/pizza4.png"
+    },
+    {   
+        "id": "05",
+        "nombre": "Pepperoni Heaven",
+        "categoria": "Clasicas",
+        "precio": 1800,
+        "imagen": "./img/pizza5.png"
+    },
+    {   
+        "id": "06",
+        "nombre": "Picante Dulce",
+        "categoria": "Clasicas",
+        "precio": 1800,
+        "imagen": "./img/pizza6.png"
+    },
+    {   
+        "id": "07",
+        "nombre": "Siciliana",
+        "categoria": "Clasicas",
+        "precio": 1900,
+        "imagen": "./img/pizza7.png"
+    },
+    {   
+        "id": "08",
+        "nombre": "Polaca",
+        "categoria": "Clasicas",
+        "precio": 1600,
+        "imagen": "./img/pizza8.png"
+    },
+    {   
+        "id": "09",
+        "nombre": "Mix Picante",
+        "categoria": "Clasicas",
+        "precio": 1650,
+        "imagen": "./img/pizza9.png"
+    },
+    {   
+        "id": "10",
+        "nombre": "Tropical Spicy",
+        "categoria": "Clasicas",
+        "precio": 1500,
+        "imagen": "./img/pizza10.png"
+    },
+    {   
+        "id": "11",
+        "nombre": "Alfredo's",
+        "categoria": "Clasicas",
+        "precio": 1750,
+        "imagen": "./img/pizza11.png"
+    },
+    {   
+        "id": "12",
+        "nombre": "Al Pesto",
+        "categoria": "Clasicas",
+        "precio": 1600,
+        "imagen": "./img/pizza12.png"
+    },
+    {   
+        "id": "13",
+        "nombre": "Papa Francis",
+        "categoria": "Gluten Free",
+        "precio": 2000,
+        "imagen": "./img/pizza13GlutenFree.png"
+    },
+    {   
+        "id": "14",
+        "nombre": "Maritima",
+        "categoria": "Gluten Free",
+        "precio": 2100,
+        "imagen": "./img/pizza14GlutenFree.png"
+    },
+    {   
+        "id": "15",
+        "nombre": "Chicken Shroom",
+        "categoria": "Gluten Free",
+        "precio": 2200,
+        "imagen": "./img/pizza15GlutenFree.png"
+    },
+    {   
+        "id": "16",
+        "nombre": "Pepperoni Spicy",
+        "categoria": "Gluten Free",
+        "precio": 2100,
+        "imagen": "./img/pizza16GlutenFree.png"
+    },
+    {   
+        "id": "17",
+        "nombre": "Caribe Magic",
+        "categoria": "Gluten Free",
+        "precio": 2300,
+        "imagen": "./img/pizza17GlutenFree.png"
+    },
+    {   
+        "id": "18",
+        "nombre": "Jalapeño Bomba",
+        "categoria": "Gluten Free",
+        "precio": 1600,
+        "imagen": "./img/pizza18GlutenFree.png"
+    },
+    {   
+        "id": "19",
+        "nombre": "Caprese",
+        "categoria": "Veggies",
+        "precio": 700,
+        "imagen": "./img/pizza19veggie.png"
+    },
+    {   
+        "id": "20",
+        "nombre": "Combo Veggie",
+        "categoria": "Veggies",
+        "precio": 850,
+        "imagen": "./img/pizza20veggie.png"
+    },
+    {   
+        "id": "21",
+        "nombre": "De los Dioses",
+        "categoria": "Veggies",
+        "precio": 950,
+        "imagen": "./img/pizza21veggie.png"
+    },
+    {   
+        "id": "22",
+        "nombre": "Napolitana",
+        "categoria": "Veggies",
+        "precio": 700,
+        "imagen": "./img/pizza22veggie.png"
+    },
+    {   
+        "id": "23",
+        "nombre": "Mix Veggie",
+        "categoria": "Veggies",
+        "precio": 600,
+        "imagen": "./img/pizza23veggie.png"
+    },
+    {   
+        "id": "24",
+        "nombre": "Carne Veggie",
+        "categoria": "Veggies",
+        "precio": 950,
+        "imagen": "./img/pizza24veggie.png"
+    }
+]
+

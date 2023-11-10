@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>3ra Pre Entrega - Francisco Flores</title>
+  </head>
+  <body>
+    <div class="contenedor">
+      <aside>
+        <header>
+          <h1 class="logo">Pizza House</h1>
+        </header>
+        <nav>
+          <ul class="navbar">
+            <li>
+              <button
+                id="pizzas-todas"
+                class="boton-navbar boton-selector active"
+              >
+                <i class="bx bxs-right-arrow"></i>Todas las Pizzas
+              </button>
+            </li>
+            <li>
+              <button id="Clasicas" class="boton-navbar boton-selector">
+                <i class="bx bxs-right-arrow"></i>Clasicas
+              </button>
+            </li>
+            <li>
+              <button id="Gluten Free" class="boton-navbar boton-selector">
+                <i class="bx bxs-right-arrow"></i>Gluten Free
+              </button>
+            </li>
+            <li>
+              <button id="Veggies" class="boton-navbar boton-selector">
+                <i class="bx bxs-right-arrow"></i>Veggies
+              </button>
+            </li>
+            <li>
+              <a class="boton-navbar boton-carrito" href="./carrito.html"
+                ><i class="bx bxs-cart"></i>Carrito
+                <span id="cantidad" class="cantidad">0</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main>
+        <div class="titulo-principal">
+          <h2 id="titulo">Todas las Pizzas</h2>
+        </div>
+        <div id="contenedor-pizzas" class="contenedor-pizzas">
+        <!-- Se completa con JS -->
+        </div>
+      </main>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

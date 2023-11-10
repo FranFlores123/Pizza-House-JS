@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>3ra Pre Entrega - Francisco Flores</title>
+  </head>
+  <body>
+    <div class="contenedor">
+      <aside>
+        <header>
+          <h1 class="logo">Pizza House</h1>
+        </header>
+        <nav>
+          <ul>
+            <li>
+              <a class="boton-navbar boton-volver" href="./index.html"
+                ><i class="bx bx-arrow-from-right"></i>Volver</a
+              >
+            </li>
+            <li>
+              <a class="boton-navbar boton-carrito active" href="./carrito.html"
+                ><i class="bx bxs-cart"></i>Carrito<span id="cantidad" class="cantidad">0</span
+                ></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main>
+        <div class="contenedor-carrito">
+          <p id="carrito-vacio" class="carrito-vacio">
+            Todavia no has pedido <i class="bx bxs-pizza"></i></p>
+
+          <div class="carrito-pizzas" id="carrito-pizzas">
+            <div class="carrito-pizza">
+              <!-- Se completa con JS -->
+            </div>
+          </div>
+
+          <div id="carrito-acciones" class="carrito-vaciar-comprar">
+            <div class="carrito-vaciar">
+              <button id="boton-vaciar" class="boton-vaciar">Vaciar carrito</button>
+            </div>
+            <div class="carrito-comprar">
+              <div class="total">
+                <p>TOTAL</p>
+                <p id="total"></p>
+              </div>
+              <button id="boton-comprar" class="boton-comprar">Pagar</button>
+            </div>
+          </div>
+          <p id="carrito-gracias" class="carrito-pagado">
+            Muchas gracias por tu compra <i class="bx bx-happy-beaming"></i>
+          </p>
+        </div>
+      </main>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/carrito.js"></script>
+  </body>
+</html>
