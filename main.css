@@ -122,8 +122,8 @@ main {
   font-family: var(--fnt-rubikDirt);
   font-size: 2rem;
   padding: 1rem;
-  font-weight: 300;
-  border-radius: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .contenedor-pizzas {
@@ -350,4 +350,5 @@ p {
   background-color: #b7401f;
   color: #ffffff;
   text-align: center;
+  text-transform: capitalize;
 }
