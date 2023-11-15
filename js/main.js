@@ -6,23 +6,12 @@ const titulo = document.querySelector("#titulo");
 const cantidadCarrito = document.querySelector("#cantidad");
 let botonAgregar = document.querySelectorAll(".boton-agregar");
 
-const pedirDatos = async () => {
-  try {
-    const response = await fetch("./js/pizzas.json");
-    const data = await response.json();
+fetch("./js/pizzas.json")
+  .then(response => response.json())
+  .then(data =>{
     todasLasPizzas = data;
-
-    cargarPizzas(todasLasPizzas)
-  } catch (error) {
-    const div = document.createElement("div");
-    titulo.innerHTML = "";
-    div.innerHTML = `Error: ${error}`;
-    div.classList.add(`error`);
-    titulo.append(div);
-  }
-};
-
-pedirDatos();
+    cargarPizzas(todasLasPizzas);
+  });
 
 function cargarPizzas (pizzaCategoria) {
   contenedorPizzas.innerHTML = "";
