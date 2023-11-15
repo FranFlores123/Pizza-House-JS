@@ -129,42 +129,42 @@
         "id": "19",
         "nombre": "Caprese",
         "categoria": "Veggies",
-        "precio": 700,
+        "precio": 1700,
         "imagen": "./img/pizza19veggie.png"
     },
     {   
         "id": "20",
         "nombre": "Combo Veggie",
         "categoria": "Veggies",
-        "precio": 850,
+        "precio": 1850,
         "imagen": "./img/pizza20veggie.png"
     },
     {   
         "id": "21",
         "nombre": "De los Dioses",
         "categoria": "Veggies",
-        "precio": 950,
+        "precio": 1950,
         "imagen": "./img/pizza21veggie.png"
     },
     {   
         "id": "22",
         "nombre": "Napolitana",
         "categoria": "Veggies",
-        "precio": 700,
+        "precio": 1700,
         "imagen": "./img/pizza22veggie.png"
     },
     {   
         "id": "23",
         "nombre": "Mix Veggie",
         "categoria": "Veggies",
-        "precio": 600,
+        "precio": 1600,
         "imagen": "./img/pizza23veggie.png"
     },
     {   
         "id": "24",
         "nombre": "Carne Veggie",
         "categoria": "Veggies",
-        "precio": 950,
+        "precio": 1950,
         "imagen": "./img/pizza24veggie.png"
     }
 ]

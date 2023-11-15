@@ -1,20 +1,28 @@
 let todasLasPizzas = [];
 
-fetch("./js/pizzas.json")
-  .then(response => response.json())
-  .then(data => {  
-      todasLasPizzas = data;
-
-      cargarPizzas(todasLasPizzas);
-  })
-
 const contenedorPizzas = document.querySelector("#contenedor-pizzas");
 const selectorPizzas = document.querySelectorAll(".boton-selector");
 const titulo = document.querySelector("#titulo");
 const cantidadCarrito = document.querySelector("#cantidad");
 let botonAgregar = document.querySelectorAll(".boton-agregar");
 
-  
+const pedirDatos = async () => {
+  try {
+    const response = await fetch("./js/pizzas.json");
+    const data = await response.json();
+    todasLasPizzas = data;
+
+    cargarPizzas(todasLasPizzas)
+  } catch (error) {
+    const div = document.createElement("div");
+    titulo.innerHTML = "";
+    div.innerHTML = `Error: ${error}`;
+    div.classList.add(`error`);
+    titulo.append(div);
+  }
+};
+
+pedirDatos();
 
 function cargarPizzas (pizzaCategoria) {
   contenedorPizzas.innerHTML = "";
@@ -63,7 +71,7 @@ function actualizarBotones() {
   });
 }
 
-//Carrito
+/*        Carrito       */
 let carrito;
 let carritoLocalStorage = localStorage.getItem("pizzasEnCarrito");
 
@@ -74,24 +82,33 @@ if (carritoLocalStorage) {
   carrito = [];
 }
 
-
 function agregarAlCarrito(e){
   const idPizza = e.currentTarget.id;
   const agregar = todasLasPizzas.find((pizza) =>pizza.id === idPizza);
 
   Toastify({
-    text: "Pizza agregada",
-    duration: 1500,
-    destination: `./carrito.html`,
-    newWindow: false,
-    close: false,
-    gravity: "top",
-    position: "right",
-    stopOnFocus: true,
-    style: {
-      background: "#361609",
-    },
-    onClick: function(){}
+  text: "Pizza agregada",
+  duration: 1500,
+  destination: `./carrito.html`,
+  newWindow: false,
+  close: false,
+  gravity: "top",
+  position: "right",
+  stopOnFocus: true,
+  style: {
+    background: "#633206",
+    borderRadius: "1rem",
+    fontSize: "1rem",
+    color: "#e6e0db",
+    textTransform: "uppercase"
+  },
+  offset: {
+    x: "1.5rem",
+    y: "1.2rem"
+  },
+
+  onClick: function(){}
+
   }).showToast();
 
   if(carrito.some((pizza)=> pizza.id === idPizza)) {

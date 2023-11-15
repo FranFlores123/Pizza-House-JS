@@ -7,13 +7,13 @@ const carritoPizzas = document.querySelector("#carrito-pizzas");
 const carritoAcciones = document.querySelector("#carrito-acciones");
 const carritoGracias = document.querySelector("#carrito-gracias");
 const carritoVaciar = document.querySelector("#boton-vaciar");
-let botonEliminar = document.querySelector(".boton-eliminar");
 const total = document.querySelector("#total");
 const comprar = document.querySelector("#boton-comprar");
+const swalText = document.querySelector("#swal2-html-container");
+let botonEliminar = document.querySelector(".boton-eliminar");
 let botonSumar = document.querySelectorAll(".boton-sumar");
 let botonRestar = document.querySelectorAll(".boton-restar");
 let cantidadPizza = document.querySelectorAll("#cantidad-pizza");
-const swalText = document.querySelector("#swal2-html-container");
 let cantidadEnCarrito = localStorage.getItem("cantidad");
 
 function cargarCarrito() {
@@ -110,7 +110,14 @@ function eliminarPizza(e) {
       position: "right",
       stopOnFocus: true,
       style: {
-        background: "#361609",
+        background: "#633206",
+        borderRadius: "1rem",
+        fontSize: "1rem",
+        textTransform: "uppercase"
+      },
+      offset: {
+        x: "1.5rem",
+        y: "1.5rem"
       },
       onClick: function(){}
     }).showToast();
@@ -180,13 +187,11 @@ function sumarAlCarrito(e){
   const idPizza = e.currentTarget.id;
   const agregar = carrito.find((pizza) =>pizza.id === idPizza);
 
-
   if(carrito.some((pizza)=> pizza.id === idPizza)) {
     const index = carrito.findIndex(pizza => pizza.id === idPizza);
     carrito[index].cantidad++;
 
     actualizarCantidad();
-
   } else {
     carrito.push(agregar);
   }
@@ -208,7 +213,6 @@ function restarAlCarrito(e){
   const idPizza = e.currentTarget.id;
   const agregar = carrito.find((pizza) =>pizza.id === idPizza);
 
-
   if(carrito.some((pizza)=> pizza.id === idPizza)) {
     const index = carrito.findIndex(pizza => pizza.id === idPizza);
 
@@ -216,7 +220,7 @@ function restarAlCarrito(e){
     carrito[index].cantidad--;
 
     actualizarCantidad();
-  }
+    }
   } else {
     carrito.push(agregar);
   }

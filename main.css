@@ -3,10 +3,10 @@
 
 :root {
   --clr-main: #d6811f;
-  --clr-darkOrange: #361609;
+  --clr-darkOrange: #633206;
   --clr-redOrange: #d97730;
   --clr-lightOrange: #f3c0859c;
-  --clr-white: hsl(27, 17%, 88%);
+  --clr-white: #e6e0db;
   --fnt-rubikDirt: "Rubik Dirt", cursive;
   --fnt-rubik: "Rubik";
 }
@@ -344,4 +344,10 @@ p {
 
 .ocultar {
   display: none;
+}
+
+.error {
+  background-color: #b7401f;
+  color: #ffffff;
+  text-align: center;
 }
