@@ -345,3 +345,10 @@ p {
 .ocultar {
   display: none;
 }
+
+.error {
+  background-color: var(--clr-redOrange);
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}

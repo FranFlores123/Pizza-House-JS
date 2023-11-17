@@ -11,7 +11,14 @@ fetch("./js/pizzas.json")
   .then(data =>{
     todasLasPizzas = data;
     cargarPizzas(todasLasPizzas);
-  });
+  })
+  .catch((error) => {
+    titulo.innerHTML = ``;
+    let div = document.createElement ("div");
+    div.classList.add("error");
+    div.innerHTML = `Error: ${error}`
+    titulo.append(div);
+  })
 
 function cargarPizzas (pizzaCategoria) {
   contenedorPizzas.innerHTML = "";

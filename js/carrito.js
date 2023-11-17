@@ -1,5 +1,6 @@
 let carrito = localStorage.getItem("pizzasEnCarrito");
 carrito = JSON.parse(carrito);
+console.log(carrito);
 
 const cantidadCarrito = document.querySelector("#cantidad");
 const carritoVacio = document.querySelector("#carrito-vacio");
@@ -57,9 +58,10 @@ function cargarCarrito() {
         </div>
         `
             carritoPizzas.append(div);
-
         })
+
     }else {
+
         carritoVacio.classList.remove("ocultar");
         carritoPizzas.classList.add("ocultar");
         carritoAcciones.classList.add("ocultar");
